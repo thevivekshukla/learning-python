@@ -31,7 +31,7 @@ while True:
   (_,cnts,_) = cv2.findContours(thresh_frame.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
   for contour in cnts:
-    if cv2.contourArea(contour) < 1000:
+    if cv2.contourArea(contour) < 10000:
       continue
     status = 1
 
@@ -40,6 +40,10 @@ while True:
 
 
   status_list.append(status)
+
+  status_list = status_list[-2:]
+
+
   if status_list[-1] == 1 and status_list[-2] == 0:
     times.append(datetime.now())
   if status_list[-1] == 0 and status_list[-2] == 1:
