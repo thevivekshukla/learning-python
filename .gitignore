@@ -1,6 +1,6 @@
 Data_Collector_app/virtual
+Data_Collector_app/__pycache__
 Book\ Store\ database\ application/__pycache__
-Book\ Store\ database\ application/build
-Book\ Store\ database\ application/__pycache__
+Book\ Store\ database\ application/build_
 flask/virtual
 
