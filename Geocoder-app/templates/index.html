@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Geocoder</title>
+
+<style>
+.container {
+  margin: 5% 5%;
+  background-color: green;
+}
+
+</style>
+
+</head>
+
+<body class="container">
+
+<center><p>{{message | safe}}</p></center>
+
+<form action="{{url_for('success')}}" enctype="multipart/form-data" method="POST">
+
+<input type="file" accept=".csv" name="file">
+<br><br>
+
+<button type="submit">Submit</button>
+<!-- <input type="submit" name="submit" value="Submit"> -->
+<br>
+
+</form>
+
+<span>
+{{df | safe}}
+</span>
+
+{% include btn ignore missing %}
+
+</body>
+
+</html>
